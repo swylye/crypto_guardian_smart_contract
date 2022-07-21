@@ -1,0 +1,21 @@
+dependencies:
+  # - <organization/repo>@<version>
+  - smartcontractkit/chainlink-brownie-contracts@0.4.1
+  - OpenZeppelin/openzeppelin-contracts@4.6.0
+compiler:
+  solc:
+    remappings:
+      - '@chainlink=smartcontractkit/chainlink-brownie-contracts@0.4.1'
+      - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.6.0'
+dotenv: .env
+networks:
+  default: development
+  rinkeby:
+    verify: True
+  mainnet-fork:
+    verify: False
+wallets:
+  DEV00: ${PRIVATE_KEY_0}
+  DEV01: ${PRIVATE_KEY_1}
+  DEV02: ${PRIVATE_KEY_2}
+  DEV03: ${PRIVATE_KEY_3}
